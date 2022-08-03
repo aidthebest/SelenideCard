@@ -33,9 +33,9 @@ public class SelenideTest {
     void test1(){
 
         Configuration.holdBrowserOpen = true;
-//        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
-//        System.setProperty("selenide.browser", "Chrome");
-//        open("http://localhost:9999");
+        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+        System.setProperty("selenide.browser", "Chrome");
+        open("http://localhost:9999");
         $x("//input[@placeholder='Город']").val("Самара");
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         $("[data-test-id='date'] input").val(data);
